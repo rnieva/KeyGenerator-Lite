@@ -135,5 +135,11 @@ namespace KeyGenerator1
             ViewData formData = new ViewData();
             formData.Show();
         }
+
+        private void button_CopyToClipboard(object sender, RoutedEventArgs e)
+        {
+            if ((string)labelKeyGenerated.Content != "")
+                System.Windows.Forms.Clipboard.SetText((string)labelKeyGenerated.Content);
+        }
     }
 }
