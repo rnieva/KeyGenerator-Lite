@@ -38,12 +38,14 @@ namespace KeyGenerator1
             comboBox2.Items.Add("32 bits");
             comboBox2.SelectedItem = "8 bits";
         }
+
         private void buttonGenerator_Click(object sender, RoutedEventArgs e)
         {
             int maxSize = MaxSize();
             string keyTypeStr = KeyTypeStr();
             labelKeyGenerated.Content = Generator(keyTypeStr, maxSize);
         }
+
         private string Generator(string keyTypeStr, int maxSize)
         {
             int tamA = keyTypeStr.Length;
@@ -61,6 +63,7 @@ namespace KeyGenerator1
             { result.Append(chars[b % (chars.Length - 1)]); }
             return result.ToString();
         }
+
         private string KeyTypeStr()
         {
             string typeStr = "";
@@ -94,6 +97,7 @@ namespace KeyGenerator1
             }
             return typeStr;
         }
+
         public int MaxSize()
         {
             int index = comboBox2.SelectedIndex;
@@ -115,6 +119,7 @@ namespace KeyGenerator1
             }
             return maxSize;
         }
+
         private void buttonSaveKey_Click(object sender, RoutedEventArgs e)
         {
                if ((textBoxSiteKey.Text.Length != 0) && (textBoxSiteKey.Text != "Site Key") && (textBoxSiteKey.Text.Length != 0) && (textBoxSiteKey.Text != "Write your own Key"))
@@ -130,6 +135,7 @@ namespace KeyGenerator1
                     MessageBox.Show("Site Key or Key into null");
                  }
         }
+
         private void buttonStoreKeys_Click(object sender, RoutedEventArgs e)
         {
             ViewData formData = new ViewData();
