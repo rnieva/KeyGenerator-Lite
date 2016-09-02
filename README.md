@@ -1,7 +1,7 @@
 # KeyGenerator Lite
 Easy Password Generator Lite v1.0. 
 Easy Password Generator creates 8-16-32 bytes keys, users choose the type of password and save the keys in a DB.
-<p>A self-taught project to learn more about Entity FrameWork and Forms. 
+<p>A self-taught project to learn more about Entity FrameWork and WPF. 
 
 **Features:**
 <p>- Using Entity FrameWork 6.1.3
